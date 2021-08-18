@@ -1,28 +1,16 @@
-import Layout from '../components/Layout'
-import Landing from '../components/body/Landing'
-import SignupForm from '../components/body/SignupForm'
-import { GridColumn, Grid } from 'semantic-ui-react'
+import CreatorsForm from '../components/CreatorsForm'
+import Layout from '@/components/fixed/Layout'
+import EarlyBird from '@/components/EarlyBird'
 
 
 
-
-const Index = () => {
+export default function Index () {
 
     return (
         <Layout>
-            <Landing />
-            <Grid>
 
-                <Grid.Row>
-                <Grid.Column width='6'>
-                    </Grid.Column>
-                </Grid.Row>
-
-            </Grid>
+            <h2>Creators Page</h2>
             
         </Layout>
     )
 }
-
-
-export default Index
