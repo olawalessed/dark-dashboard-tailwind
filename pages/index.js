@@ -1,6 +1,6 @@
 import CreatorsForm from '../components/CreatorsForm'
 import Layout from '@/components/fixed/Layout'
-import EarlyBird from '@/components/EarlyBird'
+import AuthForm from '@/components/AuthForm'
 
 
 
@@ -9,8 +9,7 @@ export default function Index () {
     return (
         <Layout>
 
-            <h2>Creators Page</h2>
-            
+            <AuthForm />
         </Layout>
     )
 }

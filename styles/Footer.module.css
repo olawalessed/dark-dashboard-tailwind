@@ -7,3 +7,9 @@
     margin: 5px 0;
 }
 
+.footer li {
+    text-decoration: none;
+    display: inline;
+    list-style: none;
+    padding: 20px;
+}
