@@ -3,26 +3,33 @@ import styles from "@/styles/DashHeader.module.css"
 import { Icon, Menu } from "semantic-ui-react";
 import logo from '../../public/img/svg/choouse.svg'
 import Image from 'next/image'
+import AuthContext from "@/context/AuthContext";
+import { useContext } from "react";
 
 
 const Header = () => {
+
+  const {user, logout} = useContext(AuthContext)
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
         <Link href="">
-          <Image src={logo} />
+          <Image
+            src={logo}
+            layout="intrinsic"
+          />
         </Link>
       </div>
 
       <nav>
         <ul>
           <li>
-            <Link href="/dashboard">
+            <Link href="#">
               <Icon name="search" />
             </Link>
           </li>
           <li>
-            <Link href="/dashboard">
+            <Link href="#">
               <Icon name="bell outline" />
             </Link>
           </li>

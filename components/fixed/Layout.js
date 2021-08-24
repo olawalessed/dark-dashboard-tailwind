@@ -9,7 +9,12 @@ import DashHeader from './DashHeader'
 const Layout = ({children, title, keyword, description}) => {
 
     const router = useRouter()
-
+  const paths =
+    {
+    home: "/",
+    login: "/account/login",
+      
+    }
     return (
       <div>
         <Head>
@@ -23,7 +28,8 @@ const Layout = ({children, title, keyword, description}) => {
         </Head>
 
         <Header />
-        {router.pathname !== "/" && <DashHeader />}
+
+        {router.pathname !== {...paths} || <DashHeader />}
 
         {router.pathname === "/" && <Hero />}
         <div className={styles.container}>{children}</div>
