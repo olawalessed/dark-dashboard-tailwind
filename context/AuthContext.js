@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react';
-import NEXT_URL from '@/config/index'
-
+import {NEXT_URL,  API_URL } from '@/config/index'
+import axios from 'axios';
 
 const AuthContext = createContext()
 
@@ -18,8 +18,10 @@ export const AuthProvider = ({ children }) => {
     }
     //Login
     const login = async ({email, password}) => {
-      //console.log({email, password});
-        const res = await fetch(`${NEXT_URL}/api/login`, {
+      console.log({email, password});
+      
+        const res = await fetch
+      ("http://localhost:3000/api/login", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -36,7 +38,9 @@ export const AuthProvider = ({ children }) => {
 
         if (res.ok) {
 
-        }
+        } else {
+            
+        } 
     }
     //Logout
     const logout = async () => {
