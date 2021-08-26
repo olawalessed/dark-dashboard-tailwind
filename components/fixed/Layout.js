@@ -5,9 +5,12 @@ import styles from '@/styles/Layout.module.css'
 import Footer from './Footer'
 import Hero from '../Hero'
 import DashHeader from './DashHeader'
+import AuthContext from '@/context/AuthContext'
+import { useContext } from 'react'
 
 const Layout = ({children, title, keyword, description}) => {
 
+  const{user} = useContext(AuthContext)
     const router = useRouter()
   const paths =
     {
@@ -27,11 +30,12 @@ const Layout = ({children, title, keyword, description}) => {
           <meta name="keywords" content={keyword} />
         </Head>
 
-        <Header />
+        {/* {router.pathname === { ...paths } && <Header />*/}
 
-        {router.pathname !== {...paths} || <DashHeader />}
-
+        {user && router.pathname === "/dashboard" && <DashHeader />}
+        {/* {router.pathname === "/dashboard" && <DashHeader />} */}
         {router.pathname === "/" && <Hero />}
+
         <div className={styles.container}>{children}</div>
 
         <Footer />
