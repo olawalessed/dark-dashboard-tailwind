@@ -6,8 +6,8 @@ import { Icon, Button } from 'semantic-ui-react';
 
 export default function DashboardLayout({ children}) {
     return (
-        <div>
-            <DashHeader />
+      <div>
+        <DashboardLayout />
         <div className={styles.wrapper}>
           <header className={styles.header}>Admin Benard</header>
 

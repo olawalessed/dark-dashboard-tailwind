@@ -5,6 +5,9 @@ import AuthContext from "@/context/AuthContext";
 import { useRouter } from "next/router";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; 
+import Link from 'next/link'
+import { Icon, Input } from "semantic-ui-react";
+
 
 export default function RegisterPage() {
   const [name, setName] = useState("")
@@ -36,59 +39,87 @@ export default function RegisterPage() {
   return (
     <Layout title="Admin Portal Login">
       <ToastContainer />
-      {user ? (
-        router.push("/dashboard")
-      ) : (
-        <div className={styles.auth}>
-          <h1>Temp Register</h1>
+      <div>
+        <Link href="/">
+          
+          <a>
+            <Icon name="arrow left" size="small" />
+            Go Back</a>
+      
+        </Link>
+      </div>
+      <div className={styles.auth}>
+        <h1>Temp Register</h1>
 
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="name" className={styles.label}>
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="name" className={styles.label}>
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <label htmlFor="email" className={styles.label}>
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <label htmlFor="password" className={styles.label}>
+            Password
+          </label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <label htmlFor="passwordConfirm" className={styles.label}>
+            Password
+          </label>
+          <input
+            type="password"
+            id="passwordConfirm"
+            value={passwordConfirm}
+            onChange={(e) => setPasswordConfirm(e.target.value)}
+            
+          >
+            
+          </input>
+          <div>
+            <Input type="submit"
+              value="Create Account"
+              className={styles.submit}
+              fluid
+              iconPosition="left"
+              
             />
-            <label htmlFor="email" className={styles.label}>
-              Email
-            </label>
+              
             <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              type="submit"
+              value="Create Account"
+              className={styles.submit}
+              
             />
-            <label htmlFor="password" className={styles.label}>
-              Password
-            </label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-            <label htmlFor="passwordConfirm" className={styles.label}>
-              Password
-            </label>
-            <input
-              type="password"
-              id="passwordConfirm"
-              value={passwordConfirm}
-              onChange={(e) => setPasswordConfirm(e.target.value)}
-            />
-            <div>
-              <input
-                type="submit"
-                value="Create Account"
-                className={styles.submit}
-              />
-            </div>
-          </form>
-        </div>
-      )}
+          </div>
+          <div>
+            <p>
+              Have an account?
+              <Link href="/account/register">
+                
+                <a>
+                  Login here</a>
+                
+              </Link>
+            </p>
+          </div>
+        </form>
+      </div>
     </Layout>
   );
 }

@@ -20,6 +20,7 @@ const Layout = ({children, title, keyword, description}) => {
     }
     return (
       <div>
+
         <Head>
           <link
             rel="stylesheet"
@@ -30,7 +31,7 @@ const Layout = ({children, title, keyword, description}) => {
           <meta name="keywords" content={keyword} />
         </Head>
 
-        {/* {router.pathname === { ...paths } && <Header />*/}
+        {!user && router.pathname !== "/dashboard" && <Header />}
 
         {user && router.pathname === "/dashboard" && <DashHeader />}
         {/* {router.pathname === "/dashboard" && <DashHeader />} */}
