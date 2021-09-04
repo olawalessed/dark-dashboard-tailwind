@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from "@/styles/Header.module.css";
 import { Button } from "semantic-ui-react";
 import logo from "../../public/img/svg/choouseDark.svg";
 import Image from "next/image";
@@ -8,7 +7,7 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <div className="max-w-full mx-auto px-2 bg-white">
+    <div className="mx-auto px-2 bg-white">
       <div className="flex justify-between">
         <div className="flex space-x-40">
           {/* Webssite logo */}

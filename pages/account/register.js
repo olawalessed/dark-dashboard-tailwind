@@ -1,6 +1,5 @@
 import { useState, useContext, useEffect } from "react";
 import Layout from "@/components/fixed/Layout";
-import styles from "@/styles/AuthForm.module.css";
 import AuthContext from "@/context/AuthContext";
 import { useRouter } from "next/router";
 import { toast, ToastContainer } from "react-toastify";

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from "@/styles/DashHeader.module.css"
 import { Button, Icon, Menu } from "semantic-ui-react";
 import logo from '../../public/img/svg/choouse.svg'
 import Image from 'next/image'
@@ -21,8 +20,8 @@ const Header = ({req}) => {
   }
   return (
     <>
-      <header className={styles.header}>
-        <div className={styles.logo}>
+      <header>
+        <div>
           <Link href="#">
             <a>
               <Image src={logo} layout="intrinsic" />
@@ -49,13 +48,13 @@ const Header = ({req}) => {
             <li>
               <Link href="/dashboard">
                 <>
-                  <div className={styles.imgSpan}>
+                  <div>
                     <img
                       src="https://www.w3schools.com/howto/img_avatar.png"
                       width="25px"
                       height="25px"
                     />
-                    <p className={styles.pan}>
+                    <p >
                       <span>{user.name}</span> <br />
                       <span>{user.account_type}</span>
                     </p>

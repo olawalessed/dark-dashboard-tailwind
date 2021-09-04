@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Header from './Header'
-import styles from '@/styles/Layout.module.css'
 import Footer from './Footer'
 import Hero from '../Hero'
 import DashHeader from './DashHeader'
@@ -37,9 +36,9 @@ const Layout = ({children, title, keyword, description}) => {
         {/* {router.pathname === "/dashboard" && <DashHeader />} */}
         {router.pathname === "/" && <Hero />}
 
-        <div className={styles.container}>{children}</div>
+        <div>{children}</div>
 
-        <Footer />
+        
       </div>
     );
 }

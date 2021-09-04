@@ -1,14 +1,13 @@
 import Link from 'next/link'
-import styles from '@/styles/Footer.module.css'
 
 
 const Footer = () => {
     const date = new Date()
     const currenYear = date.getFullYear()
     return (
-      <footer className={styles.footer}>
+      <footer>
         <p>Copyright &copy; Choouse {currenYear}</p>
-        <ul className={styles.link}>
+        <ul>
           <li>
             <Link href="/about">About</Link>
           </li>
