@@ -1,8 +1,6 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Header from './Header'
-import Footer from './Footer'
-import Hero from '../Hero'
 import DashHeader from './DashHeader'
 import AuthContext from '@/context/AuthContext'
 import { useContext } from 'react'
@@ -30,11 +28,9 @@ const Layout = ({children, title, keyword, description}) => {
           <meta name="keywords" content={keyword} />
         </Head>
 
-        {!user && router.pathname !== "/dashboard" && <Header />}
-
-        {user && router.pathname === "/dashboard" && <DashHeader />}
+        
         {/* {router.pathname === "/dashboard" && <DashHeader />} */}
-        {router.pathname === "/" && <Hero />}
+        
 
         <div>{children}</div>
 
