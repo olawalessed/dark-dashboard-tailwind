@@ -25,14 +25,8 @@ const Layout = ({children, title, keyword, description}) => {
           <meta name="description" content={description} />
           <meta name="keywords" content={keyword} />
         </Head>
-
-        
         {/* {router.pathname === "/dashboard" && <DashHeader />} */}
-        
-
         <div>{children}</div>
-
-        
       </div>
     );
 }
