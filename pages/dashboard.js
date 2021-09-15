@@ -25,6 +25,7 @@ export default function DashboardPage() {
             <h1 className="text-xl font-semibold">Choouse++</h1>
           </div>
           {/* Sidebar */}
+          {/* Main Sidebar */}
           <Sidebar />
         </div>
         <div className="flex-col w-full pl-8 py-5 pr-5 items-center">
