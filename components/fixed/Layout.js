@@ -1,7 +1,5 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import Header from './Header'
-import DashHeader from './DashHeader'
 import AuthContext from '@/context/AuthContext'
 import { useContext } from 'react'
 
