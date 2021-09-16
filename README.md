@@ -3,8 +3,8 @@
 ...
 Design with
 
-** Next JS **
-** Tailwind CSS **
-** Semantic UI Icon **
+Next JS
+Tailwind CSS
+Semantic UI Icon
 
 Live preview [here](https://darktailwind.vercel.app/)
